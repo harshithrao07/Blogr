@@ -1,0 +1,70 @@
+
+  <%- include("partials/header")  -%>
+
+  <style media="screen">
+    #heading-section{
+      background-image: url(image/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+      border-radius:0;
+    }
+    .create{
+      text-align:center;
+      border-radius:0;
+      height:400px;
+            position: relative;
+    }
+    .composebtn{
+      border:1px solid white;
+    }
+    .composebtn:hover{
+            border:1px solid white;
+            background-color:white;
+            color:black !important;
+    }
+    .arrow{
+      width:230px;
+      position:absolute;
+      left:250px;
+      top:100px;
+      rotate:20deg;
+    }
+}
+a{
+  color:white !important;
+}
+#footer{
+  border-radius: 0;
+}
+.arrow-gap{
+  width:200px;
+  position:absolute;
+    transform: scaleX(-1);
+    rotate:180deg;
+    bottom:40px;
+    right:400px;
+}
+.features{
+  display:none;
+}
+.magic{
+  position:absolute;
+  width:200px;
+  top:20px;
+  right:70px;
+  transform: scaleX(-1);
+}
+  </style>
+  <img src="/images/magic.png" class="magic">
+  <div class="create">
+    <h1>Create your very own Blog</h1>
+  <a class="noDecoration" href="/home">  <button type="button" name="button" class="btn btn-lg composebtn btn-outline-light" style="--bs-btn-padding-y: .6rem; --bs-btn-padding-x: 4rem; --bs-btn-font-size:1.2rem;">Compose!</button></a>
+    <img src="images/curly-dotted-arrow.png" class="arrow" alt="">
+  </div>
+  <div class="create">
+    <h1>Check out our ToDoList as well!</h1>
+    <a class="noDecoration" href="/list">  <button type="button" name="button" class="btn btn-lg composebtn btn-outline-light" style="--bs-btn-padding-y: .6rem; --bs-btn-padding-x: 4rem; --bs-btn-font-size:1.2rem;">Show Me!</button></a>
+    <img src="/images/arrow-gap.png" class="arrow-gap">
+  </div>
+
+  <script type="text/javascript">
+    document.getElementsByClassName("main-link")[0].setAttribute("href", "#");
+  </script>

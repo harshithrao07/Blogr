@@ -1,0 +1,404 @@
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  color: hsl(207, 13%, 34%);
+}
+
+.logo-nav {
+  width: 40px;
+  margin-right: 7px;
+}
+
+#heading-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url(image/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  background-position: center;
+  color: white;
+  border-radius: 0 0 0 100px;
+}
+
+h1 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 800 !important;
+}
+
+p {
+  font-family: "Overpass", sans-serif;
+  font-weight: 300 !important;
+  font-size: 16px;
+  color: hsl(207, 13%, 34%);
+}
+
+.navbar-brand {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 35px !important;
+  color: white !important;
+}
+
+.nav-link {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  color: white !important;
+  margin: 0 7px;
+}
+
+.arrow-down {
+  margin-left: 2px;
+}
+
+nav {
+  margin-bottom: 80px;
+}
+
+.main-para {
+  margin-top: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+.btn {
+  margin: 50px 15px 70px 15px;
+  font-family: "Ubuntu", sans-serif !important;
+  font-weight: 500 !important;
+}
+
+.head-written {
+  text-align: center;
+}
+
+.signup:hover {
+  color: black !important;
+}
+
+.login:hover {
+  background-color: hsl(237, 23%, 32%) !important;
+  color: white !important;
+}
+
+.dropdown-menu {
+  border-width: 0 !important;
+}
+
+.dropdown-item {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  color: hsl(207, 13%, 34%) !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  #designs {
+    display: grid;
+    text-align: center;
+    padding: 70px 0;
+  }
+
+  .design-heading {
+    grid-row-start: 1;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+  .mobilever-desktop {
+    margin: 40px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .side-heading1 {
+    padding: 0 60px 30px;
+  }
+
+  .side-heading2 {
+    padding: 0 60px 30px;
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #designs {
+    display: grid;
+    grid-template-columns: 600px 150px 600px;
+    margin: 80px 0 80px 100px;
+  }
+
+  .designs-heading {
+    grid-row-start: 1;
+    grid-column-end: 3;
+    grid-column-start: 1;
+    margin-left: 370px;
+  }
+
+  .side-heading1 {
+    grid-row-start: 2;
+    padding: 10px;
+  }
+
+  .side-heading2 {
+    grid-row-start: 3;
+    padding: 10px;
+  }
+
+  .desktop-img {
+    width: 600px;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin-left: 0;
+    display: inline-block;
+  }
+
+  .mobilever-desktop {
+    display: none;
+  }
+}
+
+h2, h3 {
+  color: hsl(208, 49%, 24%);
+  font-family: "Overpass", sans-serif;
+  font-weight: 600 !important;
+}
+
+@media only screen and (max-width: 1150px) {
+  #phone-design {
+    display: grid;
+    text-align: center;
+    background-image: url(image/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    border-radius: 0 100px 0 100px;
+    height: 650px;
+    background-size: 1000px;
+
+  }
+
+  .phone {
+    grid-row-start: 1;
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: 100px;
+  }
+
+  .state-of-the-art {
+    padding: 100px;
+    position: relative;
+    bottom: 200px;
+    margin-top: 30px;
+  }
+}
+
+.phone-design-heading {
+  color: white;
+  font-size: 30px;
+}
+
+.phone-design-para {
+  color: hsl(240, 2%, 79%);
+}
+
+@media only screen and (min-width: 1150px) {
+  #phone-design {
+    display: grid;
+    grid-template-columns: 600px 600px;
+    background-image: url(image/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    position: relative;
+    height: 300px;
+    border-radius: 0 100px 0 100px;
+  }
+
+  .state-of-the-art {
+    margin-top: 90px;
+    grid-column-start: 2;
+    padding-right: 70px;
+  }
+
+  .phone {
+    width: 400px;
+    grid-row-start: 1;
+    position: absolute;
+    left: 80px;
+    bottom: -70px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #last-section {
+    display: grid;
+    text-align: center;
+    margin: 70px 0;
+  }
+
+  .last-desktop {
+    display: none;
+  }
+
+  .last-laptop {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  .last-heading1, .last-heading2 {
+    margin: 20px 0;
+    padding: 0 70px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #last-section {
+    display: grid;
+    grid-template-columns: 600px 100px 600px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+  }
+
+  .last-desktop {
+    width: 600px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    display: inline-block;
+  }
+
+  .last-laptop {
+    display: none;
+  }
+
+  .last-heading2 {
+    grid-row-start: 2;
+    padding: 20px;
+  }
+
+  .last-heading1 {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 1112px) {
+  #footer {
+    display: grid;
+    background-color: hsl(240, 10%, 16%);
+    text-align: center;
+    border-radius: 0 100px 0 0;
+  }
+
+  .blogr {
+    margin: 60px 0;
+  }
+
+  .product, .company, .connect {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 1112px) {
+  #footer {
+    display: grid;
+    grid-template-columns: 100px 200px 300px 300px 300px;
+    background-color: hsl(240, 10%, 16%);
+    padding-left: 100px;
+    height: 250px;
+    padding-top: 50px;
+    overflow: hidden;
+    grid-template-rows: repeat(7, 50px);
+    border-radius: 0 100px 0 0;
+  }
+
+  .product {
+    grid-row-start: 1;
+    grid-row-end: 8;
+    grid-column-start: 2;
+  }
+
+  .product {
+    grid-column-start: 3;
+  }
+
+  .company {
+    grid-column-start: 4;
+  }
+
+  .connect {
+    grid-column-start: 5;
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.footer-text a {
+  color: gray;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer-heading {
+  color: white !important;
+  font-size: 18px !important;
+}
+
+.footer-text a:hover {
+  color: #D3D3D3;
+}
+.modal-img{
+  margin-bottom: 0;
+  margin-right: 6px;
+  margin-left: 160px;
+}
+.modal-content{
+  background-image: url(image/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  background-position: center;
+  background-size: 2000px 2000px !important;
+}
+.modal-header, .modal-body, .modal-footer{
+  border: 0 !important;
+}
+
+.btn-close{
+  margin-bottom: 20px !important;
+}
+
+input{
+margin: 20px auto 10px;
+}
+
+input:focus, input.form-control:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.modal-btn{
+  margin:0 auto 30px !important;
+}
+.calendar{
+  border-radius: 0 5px 5px 0 !important;
+}
+.date{
+  margin-bottom: 15px;
+}
+.form-group{
+  margin: 0 100px !important;
+}
+.compose{
+  margin-left: 100px;
+}
+.composebtn{
+  margin-bottom: 125px;
+}
+.composetext{
+  margin-bottom: 30px;
+}

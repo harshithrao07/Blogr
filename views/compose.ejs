@@ -1,0 +1,38 @@
+<%- include("partials/header") -%>
+
+<style media="screen">
+  #heading-section{
+    border-radius: 0;
+    background-image: url(image/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+
+  }
+.features{
+  display:none;
+}
+.plane{
+  width:150px;
+  position:absolute;
+  right:100px;
+  top:70px;
+  transform: scaleX(-1);
+}
+.goback{
+  margin-left:775px;
+}
+</style>
+<img src="/images/plane.png" class="plane">
+<h1 class="compose composetext">Compose</h1>
+<form class="" action="/compose" method="post">
+  <div class="form-group">
+    <label>Title:</label>
+    <input type="text" name="postTitle" class="form-control" autocomplete="off" required>
+    <label>Post:</label>
+    <textarea class="form-control" name="postBody" rows="6" cols="30" required></textarea>
+  </div>
+<button class="btn btn-lg btn-light compose composebtn login" type="submit" name="button" style="--bs-btn-padding-y: .3rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size:1.2rem; color: black;">Publish</button>
+<a href="home"><button class="btn btn-lg btn-light compose composebtn login goback" type="button" style="--bs-btn-padding-y: .3rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size:1.2rem; color: black;">Go Back</button></a>
+</form>
+
+<script type="text/javascript">
+  document.getElementsByClassName("main-link")[0].setAttribute("href", "#");
+</script>

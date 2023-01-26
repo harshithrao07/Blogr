@@ -1,0 +1,82 @@
+<%- include("partials/header"); -%>
+<style media="screen">
+  #heading-section{
+    border-radius: 0;
+    background-size: 5000px 5000px !important;
+    height:120px;
+  }
+  .background{
+    background-color:#3e4062;
+    margin: 0 100px 100px 100px !important;
+  }
+  html{
+    background-color : #3e4062;
+  }
+  .content{
+    color:#CBC3E3;
+  }
+#footer{
+  border-radius: 0;
+}
+.title{
+  margin-bottom: 50px;
+}
+p{white-space: pre-line}
+a{
+  text-decoration:none;
+}
+.fas{
+  font-size:60px;
+  position:absolute;
+  color:white;
+  right:120px;
+  top:190px;
+}
+.fas:hover{
+  color: #CBC3E3;
+}
+.features{
+  display:none;
+}
+.angry{
+  width:100px;
+  position:absolute;
+  top:25px;
+  right:100px;
+}
+</style>
+<img src="/images/angry.png" class="angry">
+<div class="background jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="title display-4"><%= title %></h1>
+      <a href="/home"><i class="fas fa-circle-arrow-left"></i></a>
+    <p class="content lead"><%= body %></p>
+
+  </div>
+
+</div>
+
+<section id="footer">
+
+  <a href="/index" class="navbar-brand blogr">Blogr</a>
+
+  <div class="footer-text product">
+    <p><a href="/create">Create</a></p>
+  </div>
+
+  <div class="footer-text company">
+    <p><a href="/index">Log Out</a></p>
+  </div>
+
+  <div class="footer-text connect">
+    <p><a href="https://www.instagram.com/">Instagram</a></p>
+    <p><a href="https://in.linkedin.com/">LinkedIn</a></p>
+
+  </div>
+
+</section>
+
+<script type="text/javascript">
+  document.getElementsByClassName("main-link")[0].setAttribute("href", "#");
+  document.getElementsByClassName("blogr")[0].setAttribute("href", "#");
+</script>

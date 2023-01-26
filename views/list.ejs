@@ -1,0 +1,148 @@
+<%- include("partials/header") -%>
+
+<style media="screen">
+
+  h1 {
+    color: #fff;
+    padding: 10px;
+    font-size:30px;
+  }
+
+  .box {
+    max-width: 500px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 1);
+  }
+
+  #heading {
+    background-color: #3F3B6C;
+    text-align: center;
+  }
+
+  .item {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F0DBDB;
+  }
+
+  .item:last-child {
+    border-bottom: 0;
+  }
+
+  input:checked+p {
+    text-decoration: line-through;
+    text-decoration-color: #3F3B6C;
+  }
+
+  input[type="checkbox"] {
+    margin: 20px;
+  }
+
+  p {
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #181D31;
+  }
+
+  form {
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  button {
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #3F3B6C;
+    color: #fff;
+    font-size: 30px;
+    padding-bottom: 6px;
+    border-width: 0;
+  }
+
+  input[type="text"] {
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    width: 420px;
+    color: #181D31;
+    font-weight:400;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 0 -3px 0 0 #3F3B6C;
+  }
+
+  ::placeholder {
+    color: grey;
+    opacity: 1;
+  }
+
+  .features{
+    display:none;
+  }
+  #heading-section{
+    background-image: url(image/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    border-radius:0;
+    min-height:600px;
+  }
+.crystal-ball{
+  position:absolute;
+  width:150px;
+  transform: scaleX(-1);
+  top:30px;
+  right:100px;
+}
+.close{
+  position:absolute;
+  width:50px;
+  left:350px;
+  top:145px;
+  rotate: 45deg;
+}
+
+.go-back{
+  font-family:'Courgette';
+  color:white;
+  position:absolute;
+  top:110px;
+  left:320px;
+}
+</style>
+<img src="images/crystal-ball.png" class="crystal-ball">
+<p class="go-back">Go Back</p>
+<a href="/create"><img src="images/arrow-gap.png" class="close"></a>
+  <div class="box" id="heading">
+    <h1><%= listTitle %></h1>
+  </div>
+
+  <div class="box">
+    <% newListItems.forEach(function(newListItem){ %>
+      <form action="/delete" method="post">
+        <div class="item">
+          <input type="checkbox" value="<%=newListItem._id%>" onChange="this.form.submit()" name= "checkbox">
+          <p><%= newListItem.name %></p>
+        </div>
+      </form>
+    <% }) %>
+
+    <form class="item" action="/list" method="post">
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off" required>
+      <button type="submit" name="list" value=<%= listTitle %>>+</button>
+    </form>
+
+  </div>
+
+  <script type="text/javascript">
+    document.getElementsByClassName("main-link")[0].setAttribute("href", "#");
+  </script>

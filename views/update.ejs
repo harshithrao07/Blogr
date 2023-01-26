@@ -1,0 +1,36 @@
+<%- include('partials/header'); -%>
+<style media="screen">
+  .features{
+    display:none;
+  }
+  #heading-section{
+    background-image: url(image/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    border-radius:0;
+  }
+  .plane{
+    width:150px;
+    position:absolute;
+    right:100px;
+    top:70px;
+    transform: scaleX(-1);
+  }
+  .compose{
+    margin-bottom:30px;
+  }
+</style>
+<img src="/images/plane.png" class="plane">
+    <h1 class="compose compose-text">Edit Post</h1>
+
+    <form action="/update" method="POST">
+        <div class="form-group">
+          <label>Title:</label>
+          <input type="text" class="form-control" name="title" value="<%= title %>" required>
+          <label>Post:</label>
+          <textarea class="form-control" rows="6" cols="30" name="post" required><%= content %></textarea>
+        </div>
+
+
+        <button class="btn btn-lg btn-light compose composebtn login" type="submit" name="id" style="--bs-btn-padding-y: .3rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size:1.2rem; color: black;" value="<%= id %>">Update</button>
+
+
+    </form>
