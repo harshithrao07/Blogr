@@ -45,7 +45,7 @@ app.post("/",function(req,res){
   });
   person.save(function(err){
     if(!err){
-      res.redirect("/home");
+      res.redirect("home");
     }
   })
 });
