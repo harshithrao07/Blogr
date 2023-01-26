@@ -8,8 +8,8 @@ const mongoose = require("mongoose");
 
 app.set('view engine', 'ejs');
 
-mongoose.connect("mongodb+srv://admin-harshith:Test123@cluster0.ydoselo.mongodb.net/webprojectDB")
-
+mongoose.connect("mongodb+srv://admin-harshith:Test123@cluster0.ydoselo.mongodb.net/webprojectDB");
+mongoose.set('strictQuery', true);
 app.use(bodyParser.urlencoded({
   extended: true
 }));
