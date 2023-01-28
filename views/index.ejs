@@ -4,6 +4,21 @@
     display:none;
   }
 </style>
+<script type="text/javascript">
+    function chkPasswords(){
+      var init = document.getElementById("initial");
+      var sec = document.getElementById("second");
+        if(init.value != sec.value){
+        alert("The two passwords does not match \n" + "Please re-enter both now.");
+        init.focus();
+        init.select();
+        return false;
+      }
+      else{
+        return true;
+      }
+    }
+</script>
     <div class="head-written">
       <h1>A modern publishing platform</h1>
       <p class="main-para">Grow your audience and build your online brand</p>
@@ -42,7 +57,7 @@
               <h1 style="display:inline-block" class="navbar-brand">Blogr</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="/" method="post">
+            <form action="/" method="post" id="myForm">
               <div class="modal-body">
                 <div class="input-group mb-3">
                   <input autocomplete="off" type="text" name="fname" class="form-control" placeholder="First Name" aria-label="First Name" aria-describedby="basic-addon1" required>
@@ -57,10 +72,13 @@
                   <input type="email" name="email" class="form-control"  placeholder="Enter your Email"  aria-describedby="basic-addon1" required>
                 </div>
                   <div class="input-group mb-3">
-                    <input autocomplete="off" type="text" name="username" class="form-control" placeholder="Enter a Username" aria-label="Username" aria-describedby="basic-addon1" required>
+                    <input autocomplete="off"  type="text" name="username" class="form-control" placeholder="Enter a Username" aria-label="Username" aria-describedby="basic-addon1" required>
                   </div>
                   <div class="input-group mb-3">
-                    <input autocomplete="off" type="password" name="password"  class="form-control" placeholder="Enter a Password" aria-label="Password" aria-describedby="basic-addon1" required>
+                    <input autocomplete="off"  id="initial" type="password" name="password"  class="form-control" placeholder="Enter a Password" aria-label="Password" aria-describedby="basic-addon1" required>
+                  </div>
+                  <div class="input-group mb-3">
+                    <input autocomplete="off" type="password" id="second" name="cpassword"  class="form-control" placeholder="Re-enter your Password" aria-label="Password" aria-describedby="basic-addon1" required>
                   </div>
                 </div>
               <div class="modal-footer">
@@ -128,18 +146,7 @@
 
   </section>
 <script type="text/javascript">
-  var password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirm_password");
-
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
-  } else {
-    confirm_password.setCustomValidity('');
-  }
-}
-
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
+document.getElementById("second").onblur= chkPasswords;
+document.getElementById("myForm").onsubmit= chkPasswords;
 </script>
 <%- include("partials/footer"); -%>

@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use( express.static( "public" ) );
 
-const homeStartingContent = "Created by Harshith Rao."
+const homeStartingContent = ".......................................................Created by Harshith Rao with ❤️."
 
 const blogSchema = {
   title: String,
