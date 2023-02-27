@@ -1,6 +1,13 @@
-### Links
+The Front-End languages used for building this website are HTML, CSS and JavaScript and the languages used for Back-End are Node.js, Express.js and MongoDB along with the help of EJS templates.
 
-- Live Site URL:(https://brown-bear-coveralls.cyclic.app/)
+### Getting Started
+Node must be installed on your computer
+``` 
+    npm install 
+    node app.js
+```
+
+Open http://localhost:3000 with your browser to see the result.
 
 ### Screenshots
 
